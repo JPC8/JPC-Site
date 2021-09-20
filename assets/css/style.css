@@ -19,7 +19,10 @@
     --text-color-light: hsl(var(--hue-color), 8%, 65%) ;
     --input-color: hsl(var(--hue-color), 70%, 96%) ;
     --body-color: hsl(var(--hue-color), 60%, 99%) ;
+    --first-color-bg: hsl(var(--hue-color), 70%, 97%) ;
     --container-color: hsl(var(--hue-color), 26%, 98%);
+    --card-color: hsl(var(--hue-color), 20%, 98%);
+    --card-color-hover: hsl(var(--hue-color), 15%, 97%);
     --hoverBtn-color: hsl(var(--hue-color), 40%, 96%) ;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%) ;
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ;
@@ -56,7 +59,7 @@
     --z-fixed: 100;
     --z-modal: 1000;
 
-    /* Shadow */
+    /*========== Shadow ==========*/
     --thin-shadow: 2px 2px 4px 0 rgba(0,0,0,.15);
     --thick-shadow: 0 -1px 8px 2px rgba(0,0,0,.15);
 }
@@ -69,10 +72,13 @@ body.dark-theme{
   --text-color: hsl(var(--hue-color), 8%, 75%) ;
   --input-color: hsl(var(--hue-color), 29%, 16%) ;
   --body-color: hsl(var(--hue-color), 28%, 12%) ;
+  --first-color-bg: hsl(var(--hue-color), 28%, 15%) ;
   --container-color: hsl(var(--hue-color), 29%, 16%) ;
   --hoverBtn-color: hsl(var(--hue-color), 30%, 9%) ;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%) ;
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%) ;
+  --card-color: hsl(var(--hue-color), 20%, 16%);
+  --card-color-hover: hsl(var(--hue-color), 15%, 16%);
 }
 
 /* Font size for large devices */
@@ -133,6 +139,9 @@ a{
 ::selection {
   color: #fff;
   background: var(--first-color);
+}
+.section-bg {
+  background: var(--first-color-bg);
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -549,7 +558,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .section-title h2 {
@@ -873,4 +882,92 @@ section {
   border-radius: .5rem;
   box-shadow: var(--thin-shadow);
   cursor: pointer;
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  padding: 8px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  color: var(--first-color);
+  background-color: var(--hoverBtn-color);
+  border-radius: .5rem;
+  box-shadow: var(--thin-shadow);
+  cursor: pointer;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid var(--first-color);
+  border-radius: .5rem;
+  background-color: var(--card-color);
+  padding: 1rem 1rem;
+  
+}
+
+.portfolio .portfolio-wrap:hover{
+  border: 1px solid var(--first-color-alt);
+  background-color: var(--card-color-hover);
+  box-shadow: var(--thin-shadow);
+}
+
+.port-img{
+  border-radius: .5rem;
+  border: 1px solid var(--first-color);
+  background-color: var(--container-color);
+  box-shadow: var(--thin-shadow);
+}
+.port-links .port-divr{
+  border-left: 2px solid var(--first-color);
+  margin: 0 3rem;
+}
+
+.port-links a{
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.port-links a:hover{
+  color: var(--first-color);
+}
+
+.secon-t{
+  color:var(--text-color-light);
+  font-size: var(--small-font-size);
 }

@@ -26,6 +26,9 @@
         <!-- ~~~ AOS ~~~ -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+      <!-- ~~~ Venobox ~~~ -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" integrity="sha512-e+0yqAgUQFoRrJ4pZigQXpOE0S7J9IGwmgH801h4H5ODqOCG8/GRfXHQ+9ab754NL79O7wDwdjwY3CcU8sEANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- ~~~ Stylesheet ~~~ -->
         <link rel="stylesheet" href="assets/css/style.css">
 
@@ -67,7 +70,7 @@
                 <i class ="fas fa-th-large"></i>
               </div>
             </nav>
-          </header><!-- End Header -->
+          </header>
             <!-- ======= Hero Section ======= -->
             <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
                 <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
@@ -130,7 +133,7 @@
             </section>
 
             <!-- ======= Facts Section ======= -->
-            <section id="facts" class="facts">
+            <section id="facts" class="facts section-bg">
               <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -189,7 +192,7 @@
                   <p>My techical level.</p>
                 </div>
 
-                <div class="skills-container d-flex row">
+                <div class="skills-container d-flex row" data-aos="fade-up" data-aos-delay="100">
                   <div class="col-md-6 col-sm-12"> 
                       <!-- ===Skills 1=== -->
                       <div class="skills-content skills-open">
@@ -341,16 +344,17 @@
               </div>
             </section>
 
-            <!-- ======= Resume Section ======= -->
-            <section id="resume" class="resume">
+            <!-- ======= Qualifications Section ======= -->
+            <section id="resume" class="resume section-bg">
               <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                   <h2>QUALIFICATION</h2>
                   <p>My personal journey</p>
                 </div>
+
                 <div class="qualification qualification__container ">
-                  <div class="qualification__tabs d-flex justify-content-center">
+                  <div class="qualification__tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
                       <div class="quali_Tab quali_TabA qualification__active mr-3" data-target='#education'>
                           <i class="fas fa-graduation-cap pr-2"></i>Education
                       </div>
@@ -358,7 +362,8 @@
                           <i class="fas fa-briefcase pr-2"></i>Work
                       </div>
                   </div>
-                <div class="row qualification__active" data-content id="education">
+
+                <div class="row qualification__active" data-content id="education" data-aos="fade-up" data-aos-delay="150">
                   <div class="col-lg-6">
                     <h3 class="resume-title">College</h3>
                     <div class="resume-item">
@@ -456,6 +461,64 @@
               </div>
             </section>
 
+                <!-- ======= Portfolio Section ======= -->
+            <section id="portfolio" class="portfolio">
+              <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                  <h2>Projects</h2>
+                  <p>my works</p>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <ul id="portfolio-flters">
+                      <li data-filter="*" class="filter-active">All</li>
+                      <li data-filter=".filter-app">App</li>
+                      <li data-filter=".filter-web">Web Site</li>
+                      <li data-filter=".filter-design">Design</li>
+                      <li data-filter=".filter-macro">Macro</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+                  <!-- Dynamic content -->
+                  <div class="col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                      <div class="portfolio-info row">
+                        <div class="col-lg-4 col-md-12">
+                          <img src="https://source.unsplash.com/random/800x800" class="img-fluid port-img" alt="">
+                        </div>
+
+                        <div class="col-lg-8 col-md-12">
+                          <h4 class="mt-2">CUE ASAP</h4>
+                          <p class="mb-2 secon-t"><strong><i class="far fa-calendar pr-2"></i> </strong>4 Months | 2021</p>
+                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> MERN Stack, AI-ChatBot, Google Map-API, HTML-Email</p>
+                        </div>
+
+                        </div class="col-12">
+                          <div class="port-desc mt-3 p-2">
+                            <p>CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist.</p>
+                          </div>
+                          <div class="port-links d-flex justify-content-center">
+                            <a href="https://github.com/CUE-ASAP"><i class="pr-2 fab fa-github"></i>Code</a>
+                            <span class="port-divr"></span>
+                            <a href="https://blooming-reaches-14899.herokuapp.com/"><i class="pr-2 fas fa-globe"></i>Site</a>
+                          </div>
+                          
+                        </div>
+
+                      </div>
+
+                  </div>
+                  <!-- end -->
+                </div>
+
+              </div>
+            </section>
+
           </main>
 
           <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
@@ -465,19 +528,25 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js" integrity="sha512-iELsXYafbp3drYeT4GnTWc0bRzoyA9zeMPohtYOL/xmCEjqc7xbPpV0UXRfhjGgy3co9XR2YkZq/CQvEa+Os8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="assets/js/script.js" async defer></script>
     </body>
