@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 188; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 188; /*Purple 250 - Green 142 - Blue 230 - Pink 340 Cyan-188*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 45%) ;
@@ -616,7 +616,14 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
-.abt_BtnDiv{
+.ProfileImg{
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  border: 2px solid var(--first-color-alt);
+
+}
+.abt_BtnDiv,
+.abt_Img{
   display: flex;
   align-items: center;
   justify-content: center;
