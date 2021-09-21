@@ -26,8 +26,11 @@
         <!-- ~~~ AOS ~~~ -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <!-- ~~~ Venobox ~~~ -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" integrity="sha512-e+0yqAgUQFoRrJ4pZigQXpOE0S7J9IGwmgH801h4H5ODqOCG8/GRfXHQ+9ab754NL79O7wDwdjwY3CcU8sEANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- ~~~ Venobox ~~~ -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" integrity="sha512-e+0yqAgUQFoRrJ4pZigQXpOE0S7J9IGwmgH801h4H5ODqOCG8/GRfXHQ+9ab754NL79O7wDwdjwY3CcU8sEANg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+        <!-- ~~~ Tool-tip ~~~ -->
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
 
         <!-- ~~~ Stylesheet ~~~ -->
         <link rel="stylesheet" href="assets/css/style.css">
@@ -36,17 +39,19 @@
         <title>JPC8 | Portfolio</title>
         <meta name="description" content="JPC8 portfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <script async src="assets/js/dynamicCont.js"></script> -->
         
     </head>
     <body>
         <header class="header" id="header">
             <nav class="d-flex flex-column">
               <div class="profile">
-                <img src="assets/img/Dp-1.JPG" alt="" class="img-fluid rounded-circle">
+                <img src="assets/img/Dp-1-min.jpg" alt="" class="img-fluid rounded-circle">
                 <div class="social-links mt-3 text-center">
-                  <a href="#" class="Discord"><span class="iconify" data-icon="la:discord"></span></a>
-                  <a href="#" class="GitHub"><span class="iconify" data-icon="eva:github-outline"></span></a>
-                  <a href="#" class="linkedin"><span class="iconify" data-icon="eva:linkedin-outline"></span></a>
+                  <a href="https://discord.com/" id="discordHover" class="Discord"><span class="iconify" data-icon="bx:bxl-discord-alt" ></span></a>
+                  <a href="https://github.com/JPC8" id="githubHover" class="GitHub pt-2 pb-2"><span class="iconify" data-icon="uim:github-alt"></span></a>
+                  <a href="https://www.linkedin.com/in/jpc8" id="linkedinHover" class="linkedin "><span class="iconify" data-icon="la:linkedin-in" ></span></a>
                 </div>
               </div>
         
@@ -74,8 +79,8 @@
             <!-- ======= Hero Section ======= -->
             <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
                 <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-                <h1>Joshua Prem Cyril</h1>
-                <!-- <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p> -->
+                  <H1>Joshua Prem Cyril</H1>
+                <!-- <p class="pl-2">I'm <span class="typed" data-typed-items="Analyst, Developer, Freelancer, Designer"></span></p> -->
                 </div>
             </section>
 
@@ -471,10 +476,10 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="50">
                     <ul id="portfolio-flters">
                       <li data-filter="*" class="filter-active">All</li>
-                      <li data-filter=".filter-app">App</li>
+                      <li data-filter=".filter-code">Code</li>
                       <li data-filter=".filter-web">Web Site</li>
                       <li data-filter=".filter-design">Design</li>
                       <li data-filter=".filter-macro">Macro</li>
@@ -482,36 +487,153 @@
                   </div>
                 </div>
 
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row portfolio-container" data-aos-delay="100">
 
-                  <!-- Dynamic content -->
-                  <div class="col-md-6 portfolio-item filter-app">
+                  <!-- Project 1 -->
+                  <div class="col-md-6 portfolio-item filter-code filter-web">
                     <div class="portfolio-wrap">
                       <div class="portfolio-info row">
                         <div class="col-lg-4 col-md-12">
-                          <img src="https://source.unsplash.com/random/800x800" class="img-fluid port-img" alt="">
+                          <img src="/assets/img/project/cue-asap-logo.jpg" class="img-fluid port-img" alt="">
                         </div>
 
                         <div class="col-lg-8 col-md-12">
                           <h4 class="mt-2">CUE ASAP</h4>
                           <p class="mb-2 secon-t"><strong><i class="far fa-calendar pr-2"></i> </strong>4 Months | 2021</p>
-                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> MERN Stack, AI-ChatBot, Google Map-API, HTML-Email</p>
+                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> MERN Stack, AI-ChatBot, Google Map-API, HTML-Email, Journal</p>
                         </div>
 
-                        </div class="col-12">
+                        <div class="col-12">
                           <div class="port-desc mt-3 p-2">
-                            <p>CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist.</p>
+                            <p>CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist. This projects was done during my final year in college, This is the iteration of Cue-ASAP ver 0.1 (beta).</p>
                           </div>
                           <div class="port-links d-flex justify-content-center">
                             <a href="https://github.com/CUE-ASAP"><i class="pr-2 fab fa-github"></i>Code</a>
                             <span class="port-divr"></span>
-                            <a href="https://blooming-reaches-14899.herokuapp.com/"><i class="pr-2 fas fa-globe"></i>Site</a>
+                            <a href="https://blooming-reaches-14899.herokuapp.com/"><i class="pr-2 fas fa-globe"></i>Demo</a>
                           </div>
-                          
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+
+                  <!-- Project 2 -->
+                  <div class="col-md-6 portfolio-item filter-design filter-web">
+                    <div class="portfolio-wrap">
+                      <div class="portfolio-info row">
+                        <div class="col-lg-4 col-md-12">
+                          <img src="/assets/img/project/air-city-logo.JPG" class="img-fluid port-img" alt="">
                         </div>
 
-                      </div>
+                        <div class="col-lg-8 col-md-12">
+                          <h4 class="mt-2">Air City</h4>
+                          <p class="mb-2 secon-t"><strong><i class="far fa-calendar pr-2"></i> </strong>2 Months | 2018</p>
+                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> Branding, Logo, Website, UI, PPT, Illustration, Color theory</p>
+                        </div>
 
+                        <div class="col-12">
+                          <div class="port-desc mt-3 p-2">
+                            <p>Air City is an imaginary brand for which I have created a complete branding. Designing logo, brochure, letterhead, visiting card, post card, shirts and cap. I have created a ppt that explains all the steps and processes. This project was done during my college in Branding & illustration course.</p>
+                          </div>
+                          <div class="port-links d-flex justify-content-center">
+                            <a href="https://drive.google.com/file/d/1mJ5eTaWV8AOs_e6GGjozaZN7MzqRCHfJ/view?usp=sharing" target="_blank"><i class="pr-2 fas fa-arrow-down"></i>PPT</a>
+                            <span class="port-divr"></span>
+                            <a href="https://sites.google.com/view/wwwaircity2k18com/home"><i class="pr-2 fas fa-globe"></i>Site</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+
+                  <!-- Project 3 -->
+                  <div class="col-md-6 portfolio-item filter-code filter-web">
+                    <div class="portfolio-wrap">
+                      <div class="portfolio-info row">
+                        <div class="col-12">
+                          <h4 class="mt-2">Web Apps</h4>
+                          <p class="mb-2 secon-t"><strong><i class="far fa-calendar pr-2"></i> </strong>3 Months | 2021</p>
+                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> API, DOM, React, JS Framework, Node, Clone</p>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="port-desc mt-3 p-2">
+                            <p>These projects were done during full-stack bootcamp @ guvi.</p>
+                          </div>
+                          <div class="row port-links p-2">
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://food-jpc8.netlify.app/"><i class="pr-2 fas fa-globe"></i>Foody Tōlan</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://news-jpc8.netlify.app"><i class="pr-2 fas fa-globe"></i>Daily Aurora</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://counter-quote-jpc8.netlify.app/"><i class="pr-2 fas fa-globe"></i>Quotes</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://form-dom-jpc8.netlify.app/"><i class="pr-2 fas fa-globe"></i>DOM Form</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://yes-or-no-jpc8.netlify.app/"><i class="pr-2 fas fa-globe"></i>Yes or No</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://pricing-jpc8.netlify.app/"><i class="pr-2 fas fa-globe"></i>Pricing</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://yt-clone-jpc8.netlify.app/"><i class="pr-2 fab fa-youtube"></i>YT Clone</a>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <a href="https://files-structure-jpc8.herokuapp.com/"><i class="pr-2 fas fa-folder"></i>Local Files</a>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+
+                  <!-- Project 4 -->
+                  <div class="col-md-6 portfolio-item filter-design">
+                    <div class="portfolio-wrap">
+                      <div class="portfolio-info row">
+
+                        <div class="col-12">
+                          <h4 class="mt-2">Designs</h4>
+                          <p class="mb-2 secon-t"><strong><i class="far fa-calendar pr-2"></i> </strong>2015 - 2021</p>
+                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> Brading, Illustration, Logos, Invite-cards, UI, prototyping.</p>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="port-desc mt-3 p-2">
+                            <p>These are some designs, branding, illustration, logo, invite cards, banners, posters, UI/UX prototyping.</p>
+                          </div>
+                          <div class="port-links d-flex justify-content-center">
+                            <a href="#"><i class="pr-2 fas fa-globe"></i>View Designs</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+
+                  <!-- Project 5 -->
+                  <div class="col-md-6 portfolio-item filter-macro">
+                    <div class="portfolio-wrap">
+                      <div class="portfolio-info row">
+                        
+                        <div class="col-12">
+                          <h4 class="mt-2">Macros &amp; Addins</h4>
+                          <p class="mb-2 secon-t"><strong><i class="far fa-calendar pr-2"></i> </strong>4 Months | 2021</p>
+                          <p class="mb-2 secon-t"><strong><i class="fas fa-shapes pr-2"></i></strong> VBA automation, Addins, Macros, Slicers, Timelines, Userforms</p>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="port-desc mt-3 p-2">
+                            <p>I have worked on VBA automation, Addins, Macros, Slicers, Timelines, Userforms. If you have a new automation or macro, addins.</p>
+                          </div>
+                          <div class="port-links d-flex justify-content-center">
+                            <a href="#"><i class="pr-2 fas fa-user"></i>Contact Me</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                   </div>
                   <!-- end -->
                 </div>
@@ -523,7 +645,8 @@
 
           <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
           <div id="preloader"></div>
-
+        
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -544,11 +667,20 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         
+        <!-- Development -->
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+        <!-- Production -->
+        <!-- <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script> -->
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <script src="assets/js/tooltip.js" async defer></script>
+        
         <script src="assets/js/script.js" async defer></script>
     </body>
 </html>

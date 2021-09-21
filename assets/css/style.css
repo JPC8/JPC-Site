@@ -18,6 +18,8 @@
     --title-color: hsl(var(--hue-color), 8%, 15%) ;
     --text-color: hsl(var(--hue-color), 8%, 45%) ;
     --text-color-light: hsl(var(--hue-color), 8%, 65%) ;
+    --text-hero-color: hsl(var(--hue-color), 8%, 99%) ;
+    --text-hero-color2: hsl(var(--hue-color), 8%, 95%) ;
     --input-color: hsl(var(--hue-color), 70%, 96%) ;
     --body-color: hsl(var(--hue-color), 60%, 99%) ;
     --first-color-bg: hsl(var(--hue-color), 70%, 97%) ;
@@ -27,6 +29,7 @@
     --hoverBtn-color: hsl(var(--hue-color), 40%, 96%) ;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%) ;
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ;
+
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -81,6 +84,18 @@ body.dark-theme{
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%) ;
   --card-color: hsl(var(--hue-color), 20%, 16%);
   --card-color-hover: hsl(var(--hue-color), 15%, 16%);
+}
+
+.tippy-box[data-theme~='space'] {
+  background: var(--first-color);
+  background: -moz-linear-gradient(38deg, var(--first-color) 25%, var(--first-color-second) 100%);
+  background: -webkit-linear-gradient(38deg, var(--first-color) 25%, var(--first-color-second) 100%);
+  background: linear-gradient(38deg, var(--first-color) 25%, var(--first-color-second) 100%); 
+  /* background-color: var(--first-color); */
+  color: #fff;
+}
+.tippy-box[data-theme~='space'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: var(--first-color);
 }
 
 /* Font size for large devices */
@@ -247,7 +262,9 @@ a{
   z-index: 99998;
   transition: all 0.5s;
   padding: 0 15px;
-  background: var(--container-color);
+  /* background: var(--container-color); */
+  background-image: linear-gradient(232deg, #aadbd9,var(--container-color));
+  box-shadow: var(--thick-shadow);
   overflow-y: auto;
 }
 
@@ -275,11 +292,11 @@ a{
 }
 
 #header .profile .social-links a {
-  font-size: 18px;
+  font-size: 13px;
   display: inline-block;
   color: var(--text-color);
   line-height: 1;
-  padding: 8px 0;
+  padding: 6.5px 0;
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
@@ -464,7 +481,10 @@ a{
   width: 100%;
   height: 100vh;
   /* background: url("../img/Feeling\ Stressed\ These\ Relaxing\ GIFs\ Will\ Calm\ You\ down.gif") top center; */
-  background-size: cover;
+  /* background-size: cover; */
+  background-image: linear-gradient(45deg, rgba(106, 106, 106,0.06) 0%, rgba(106, 106, 106,0.06) 50%,rgba(174, 174, 174,0.06) 50%, rgba(174, 174, 174,0.06) 100%),linear-gradient(135deg, rgba(252, 252, 252,0.06) 0%, rgba(252, 252, 252,0.06) 50%,rgba(117, 117, 117,0.06) 50%, rgba(117, 117, 117,0.06) 100%),linear-gradient(90deg, var(--first-color),var(--first-color)); background-size: 80px 80px;
+  
+  background-attachment: fixed;
 }
 
 #hero:before {
@@ -480,8 +500,8 @@ a{
 
 #hero .hero-container {
   position: relative;
-  z-index: 2;
   min-width: 200px;
+  z-index: 2;
 }
 
 #hero h1 {
@@ -489,28 +509,28 @@ a{
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: var(--text-color);
-}
-
-#hero p {
-  color: var(--text-color-light);
-  margin-bottom: 50px;
-  font-size: 26px;
+  color: var(--text-hero-color);
   font-family: "Poppins", sans-serif;
 }
 
+#hero p {
+  color: var(--text-hero-color2);
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
 #hero p span {
-  color: var(--text-color-light);
+  color: var(--text-hero-color2);
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid var(--first-color);
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   #hero {
     background-attachment: fixed;
   }
-}
+} */
 
 @media (max-width: 1080px) {
   #hero h1 {

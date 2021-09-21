@@ -249,15 +249,6 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
-    $('.venobox').venobox({
-      // 'framewidth' : '95%',                         
-      // 'frameheight': '90%',                      
-      // 'border'     : '4px',                                                                
-      // 'numeratio'  : true,                             
-      'share': false
-    });
-
     // Initiate aos_init() function
     aos_init();
 
