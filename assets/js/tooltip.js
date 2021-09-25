@@ -23,6 +23,30 @@
     appendTo: document.body
   });
 
+  tippy('.tip_mode', {
+    content: 'Dark / Light',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    appendTo: document.body
+  });
+
+  tippy('.tip_theme', {
+    content: '<div class="theme-container"> <p>Themes:<p> <div class="theme-cr"><span class = "theme-cr-1"></span> <span class = "theme-cr-2"></span> <span class = "theme-cr-3"></span></div></div>',
+    interactive: true,
+    interactiveDebounce: 40,
+    interactiveBorder: 10,
+    zIndex: 99999,
+    animation: 'scale',
+    offset: [-36, 2],
+    theme: 'themeSelector',
+    touch: 'hold',
+    delay: [400, null],
+    allowHTML: true,
+    appendTo: document.body,
+  });
+
+
 // dynamic text Input area is created and removing when it is copied into clipboard
 function Clipboard_CopyTo(value) {
     var tempInput = document.createElement("input");

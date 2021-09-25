@@ -7,10 +7,8 @@
     --header-height: 3rem ;
 
     /*========== Colors ==========*/
-    /* Change favorite color */
     --hue-color: 188; /*Purple 250 - Green 142 - Blue 230 - Pink 340 Cyan-188*/
 
-    /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 45%) ;
     --first-color-second: hsl(var(--hue-color), 80%, 45%) ;
     --first-color-alt: hsl(var(--hue-color), 57%, 53%) ;
@@ -98,6 +96,13 @@ body.dark-theme{
   border-top-color: var(--first-color);
 }
 
+.tippy-box[data-theme~='themeSelector'] {
+  background: var(--body-color);
+  color: var(--text-color);
+}
+.tippy-box[data-theme~='themeSelector'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: var(--body-color);
+}
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
     :root {
@@ -163,6 +168,51 @@ a{
 .section-bg {
   background: var(--first-color-bg);
 }
+
+/* theme */
+.theme-container{
+  padding: .175rem;
+}
+
+.theme-container p{
+  margin-bottom: 5px;
+}
+.theme-cr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+/* Themes */
+.theme-cr-1,
+.theme-cr-2,
+.theme-cr-3{
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
+  margin: 2px 5px;
+  transition: 0.2s;
+}
+
+.theme-cr-1:hover,
+.theme-cr-2:hover,
+.theme-cr-3:hover{
+  box-shadow: var(--thin-shadow);
+}
+
+.theme-cr-1{
+  background-image: url("/assets/img/theme-jpc/cyan-box.png");
+}
+
+.theme-cr-2{
+  background-image: repeating-radial-gradient(circle at center center, rgba(29,100,7, 0.3) 0px, rgba(29,100,7, 0.3) 2px,transparent 2px, transparent 12px,rgba(197,139,201, 0.3) 12px, rgba(197,139,201, 0.3) 17px,transparent 17px, transparent 22px),linear-gradient(90deg, rgb(244,244,255) 0%,rgb(244,244,255) 36%); 
+  background-size: 10px 10px;
+}
+
+.theme-cr-3{
+  background-color: green;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -355,25 +405,27 @@ a{
   display: none;
   width: 40px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: .5rem;
   right: 15px;
   bottom: 15px;
   background: var(--first-color);
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99997;
+  
 }
 
 .back-to-top i {
-  font-size: 24px;
+  font-size: 20px;
   position: absolute;
-  top: 7px;
-  left: 8px;
+  top: 22%;
+  left: 25%;
 }
 
 .back-to-top:hover {
   color: #fff;
-  background: --var(--first-color-alt);
+  background-color: var(--first-color-alt);
+  text-decoration: none;
   transition: background 0.2s ease-in-out;
 }
 
@@ -391,10 +443,14 @@ a{
   z-index: 99998;
   transition: all 0.5s;
   padding: 0 15px;
-  /* background: var(--container-color); */
-  background-image: linear-gradient(232deg, #aadbd9,var(--container-color));
+  background: var(--container-color);
+  /* background-image: linear-gradient(232deg, #aadbd9,var(--container-color)); */
   box-shadow: var(--thick-shadow);
   overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
 }
 
 #header .profile img {
@@ -402,16 +458,6 @@ a{
   display: block;
   width: 120px;
   border: 4px solid var(--first-color-alt);
-}
-
-#header .profile h1 {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
-  font-family: "Poppins", sans-serif;
 }
 
 #header .profile h1 a, #header .profile h1 a:hover {
@@ -442,14 +488,15 @@ a{
 }
 
 #header .copyright {
-  position: absolute;
-  bottom:20px;
-  width: 160px;
+  /* position: fixed; */
+  margin:20px 0px 25px 0;
+  width: 80%;
   text-align: center;
+  align-self: center;
   color: var(--text-color);
   font-size: 14px;
-  background-color: #fff;
-  padding: .125rem;
+  background-color: rgb(53, 52, 52);
+  padding: .0125rem;
   border-radius: .5rem;
 }
 
@@ -543,6 +590,11 @@ a{
       border-radius: 1.5rem 1.5rem 0 0;
       transition: .3s
   }
+  .navv-btns{
+    align-content: flex-end;
+    align-items:flex-end;
+    max-height: fit-content;
+  }
   .navv-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -560,6 +612,9 @@ a{
   }
   .back-to-top {
     bottom: 3rem;
+  }
+  #header .copyright{
+    display: none;
   }
 }
 
@@ -633,14 +688,16 @@ a{
   height: 100vh;
   /* background: url("../img/Feeling\ Stressed\ These\ Relaxing\ GIFs\ Will\ Calm\ You\ down.gif") top center; */
   /* background-size: cover; */
-  background-image: linear-gradient(45deg, rgba(106, 106, 106,0.06) 0%, rgba(106, 106, 106,0.06) 50%,rgba(174, 174, 174,0.06) 50%, rgba(174, 174, 174,0.06) 100%),linear-gradient(135deg, rgba(252, 252, 252,0.06) 0%, rgba(252, 252, 252,0.06) 50%,rgba(117, 117, 117,0.06) 50%, rgba(117, 117, 117,0.06) 100%),linear-gradient(90deg, var(--first-color),var(--first-color)); background-size: 80px 80px;
-  
+  background-image: linear-gradient(45deg, rgba(106, 106, 106,0.06) 0%, rgba(106, 106, 106,0.06) 50%,rgba(174, 174, 174,0.06) 50%, rgba(174, 174, 174,0.06) 100%),linear-gradient(135deg, rgba(252, 252, 252,0.06) 0%, rgba(252, 252, 252,0.06) 50%,rgba(117, 117, 117,0.06) 50%, rgba(117, 117, 117,0.06) 100%),linear-gradient(90deg, var(--first-color),var(--first-color)); 
+  background-size: 70px 70px;
+
+
   background-attachment: fixed;
 }
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  /* background: rgba(5, 13, 24, 0.3); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -677,6 +734,15 @@ a{
   border-bottom: 3px solid var(--first-color);
 }
 
+.scroll_txt{
+  position: absolute;
+  bottom:0px;
+  z-index: 2;
+}
+
+.scroll_txt p{
+  color: var(--first-color);
+}
 /* @media (min-width: 1440px) {
   #hero {
     background-attachment: fixed;
@@ -997,7 +1063,7 @@ section {
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
+  line-height: 1.3;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1009,6 +1075,7 @@ section {
 .resume .resume-item h5 {
   font-size: 16px;
   background: var(--container-color);
+
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
