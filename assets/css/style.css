@@ -95,6 +95,9 @@ body.dark-theme{
 .tippy-box[data-theme~='space'][data-placement^='top'] > .tippy-arrow::before {
   border-top-color: var(--first-color);
 }
+.tippy-box[data-theme~='space'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: var(--first-color);
+}
 
 .tippy-box[data-theme~='themeSelector'] {
   background: var(--body-color);
@@ -429,6 +432,10 @@ a{
   transition: background 0.2s ease-in-out;
 }
 
+.home-icons{
+  width: 24px;
+  height: 24px;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -495,7 +502,7 @@ a{
   align-self: center;
   color: var(--text-color);
   font-size: 14px;
-  background-color: rgb(53, 52, 52);
+  background-color: var(--container-color);
   padding: .0125rem;
   border-radius: .5rem;
 }
@@ -550,14 +557,16 @@ a{
   display: flex;
   align-items: center;
   color: var(--text-color);
-  padding: 12px 30px;
+  padding: 8px 30px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
 }
 
-.navv-menu a i {
-  font-size: 18px;
+.navv-menu a .navv-icon {
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
   padding-right: 8px;
   color: var(--text-color);
 }
@@ -570,30 +579,38 @@ a{
   box-shadow: var(--thin-shadow);
 }
 
-.navv-menu a:hover i, .navv-menu .active > a i, .navv-menu li:hover > a i {
+.navv-menu a:hover .navv-icon, .navv-menu .active > a .navv-icon, .navv-menu li:hover > a .navv-icon {
   color: var(--first-color);
 }
-
+.navv-mob-txt{
+  display: none;
+}
 /* only for small devices */
 @media screen and (max-width: 767px){
   .profile{
     display: none;
   }
   .navv-menu{
-      position: fixed;
-      bottom: -100%;
-      left: 0;
-      width: 100%;
-      background-color: var(--body-color);
-      padding: 2rem 1.5rem 4rem;
-      box-shadow: var(--thick-shadow);
-      border-radius: 1.5rem 1.5rem 0 0;
-      transition: .3s
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: var(--thick-shadow);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .3s
   }
   .navv-btns{
-    align-content: flex-end;
-    align-items:flex-end;
-    max-height: fit-content;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0px 20px;
+    margin-top: 1%;
+  }
+  .change-color{
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .navv-list{
     display: grid;
@@ -609,6 +626,17 @@ a{
   }
   .navv-menu a i{
     padding: 0px;
+  }
+  .navv-mob-txt{
+    display: block;
+    position: absolute;
+    left: 20px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+  }
+  .navv-mob-pry{
+    color: var(--first-color);
   }
   .back-to-top {
     bottom: 3rem;
@@ -637,10 +665,10 @@ a{
   position: absolute;
   right: 1.3rem;
   bottom: .5rem;
-  font-size: 1.5rem;
+  font-size: 20px;
   cursor: pointer;
   color: var(--first-color);
-  padding: 8px 14px;
+  padding: 15px 18px;
 }
 .change-theme,
 .change-color{
@@ -735,13 +763,16 @@ a{
 }
 
 .scroll_txt{
+  color: rgb(0, 0, 0);
   position: absolute;
-  bottom:0px;
+  bottom:15px;
   z-index: 2;
+  color: #fff;
+  transition: all .5s;
+  cursor: default;
 }
-
-.scroll_txt p{
-  color: var(--first-color);
+.scroll_txt:hover{
+  bottom:20px;
 }
 /* @media (min-width: 1440px) {
   #hero {
@@ -871,7 +902,6 @@ section {
   background-color: var(--container-color);
   border-radius: 1rem;
   border: 2px solid var(--first-color-alt);
-
 }
 .abt_BtnDiv,
 .abt_Img{
@@ -896,7 +926,17 @@ section {
   box-shadow: var(--thin-shadow);
   cursor: pointer;
 }
+@media screen and (max-width: 990px){
+  .section-content{
+    display: flex;
+    flex-wrap: wrap-reverse;
 
+  }
+  .ProfileImg{
+    width: 60%;
+    height:60%;
+  }
+}
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -916,8 +956,9 @@ section {
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 28px;
-  background: var(--first-color-bg);
+  font-size: 18px;
+  background: var(--container-color);
+  border: 8px solid var(--first-color-bg);
   padding: 12px;
   color: var(--first-color);
   border-radius: 50px;
@@ -1218,8 +1259,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f8f9;
-  color: #45505b;
+  background: var(--container-color);
+  color: var(--text-color);
   font-size: 14px;
   padding: 20px 20px 20px 200px;
   bottom: 0;
@@ -1266,8 +1307,17 @@ section {
   text-decoration: none;
 }
 
+#footer .credits{
+  font-size: 15px;
+  margin-left: 15px;
+}
+#footer .signoff {
+  font-size: 12px;
+  text-align: center;
+}
 
-
-#footer .credits {
-  font-size: 13px;
+@media screen and (max-width: 767px){
+  #footer {
+    padding: 20px;
+}
 }

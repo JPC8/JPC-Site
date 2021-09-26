@@ -7,6 +7,7 @@
         $('#preloader').delay(4).fadeOut('slow', function() {
           $(this).remove();
         });
+       
       }
     });
 
@@ -88,7 +89,7 @@
       }, 1500, 'easeInOutExpo');
       return false;
     });
-
+    
     /*==================== MENU SHOW Y HIDDEN ====================*/
     const navMenu = document.getElementById('navv-menu'),
     navToggle = document.getElementById('navv-toggle'),
@@ -213,6 +214,7 @@
         once: true
       });
     }
+
         /*==================== QUALIFICATION TABS ====================*/
         const tabs = document.querySelectorAll('[data-target]'),
         tabContents = document.querySelectorAll('[data-content]')

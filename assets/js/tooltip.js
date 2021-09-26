@@ -46,6 +46,74 @@
     appendTo: document.body,
   });
 
+  tippy('#bs_tip', {
+    content: 'Breakpoints, Layouts, box-models',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+
+  tippy('#fas_tip', {
+    content: 'sections, link icons',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+
+  tippy('#icofy_tip', {
+    content: 'social media, menu bar',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+
+  tippy('#aso_tip', {
+    content: 'Animate on scroll !! cool ri8?',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+
+  tippy('#typ_tip', {
+    content: 'Typing animation, Home section',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+  tippy('#cnt_tip', {
+    content: 'Numbers counter see in Facts section',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+  tippy('#tipy_tip', {
+    content: 'Tool-tips !! even this one :)',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
+  tippy('#iso_tip', {
+    content: 'Card filters, see in projects section',
+    zIndex: 99999,
+    animation: 'scale',
+    theme: 'space',
+    placement: 'bottom',
+    appendTo: document.body
+  });
 
 // dynamic text Input area is created and removing when it is copied into clipboard
 function Clipboard_CopyTo(value) {

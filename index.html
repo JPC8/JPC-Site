@@ -19,15 +19,8 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/collection/components/icon/icon.min.css" integrity="sha512-DR9Jj0uFIfe7v1QLrvPRusRxqdSnVSVRyRBt1H8gcRQgxMKEwsOMSNYs0hyIpo8AITFyCMDC2Q1fCg1XcgdYig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- ~~~ Owl Carousel 2 CND 2.3.4~~~ -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
         <!-- ~~~ AOS ~~~ -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- ~~~ Venobox ~~~ -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" integrity="sha512-e+0yqAgUQFoRrJ4pZigQXpOE0S7J9IGwmgH801h4H5ODqOCG8/GRfXHQ+9ab754NL79O7wDwdjwY3CcU8sEANg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
         <!-- ~~~ Tool-tip ~~~ -->
         <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
@@ -49,25 +42,27 @@
               <div class="profile">
                 <img src="assets/img/JPC-DP.png" alt="" class="img-fluid rounded-circle">
                 <div class="social-links mt-3 text-center">
-                  <a href="https://discord.com/" id="discordHover" class="Discord"><span class="iconify" data-icon="bx:bxl-discord-alt" ></span></a>
-                  <a href="https://github.com/JPC8" id="githubHover" class="GitHub pt-2 pb-2"><span class="iconify" data-icon="uim:github-alt"></span></a>
-                  <a href="https://www.linkedin.com/in/jpc8" id="linkedinHover" class="linkedin "><span class="iconify" data-icon="la:linkedin-in" ></span></a>
+                  <a href="https://discord.com/" target="_blank" id="discordHover" class="Discord"><span class="iconify" data-icon="bx:bxl-discord-alt" ></span></a>
+                  <a href="https://github.com/JPC8" target="_blank" id="githubHover" class="GitHub pt-2 pb-2"><span class="iconify" data-icon="uim:github-alt"></span></a>
+                  <a href="https://www.linkedin.com/in/jpc8" target="_blank" id="linkedinHover" class="linkedin "><span class="iconify" data-icon="la:linkedin-in" ></span></a>
                 </div>
               </div>
         
               <div class="navv-menu" id="navv-menu">
                 <ul class="navv-list">
-                  <li class="navv-item active"><a href="#" class="navv-link"><i class="fas fa-home navv-icon"></i> <span>Home</span></a></li>
-                  <li class="navv-item"><a href="#about" class="navv-link"><i class="fas fa-user navv-icon"></i> <span>About</span></a></li>
-                  <li class="navv-item"><a href="#skills" class="navv-link"><i class="fas fa-ribbon navv-icon"></i> <span>Skills</span></a></li>
-                  <li class="navv-item"><a href="#portfolio" class="navv-link"><i class="fas fa-book navv-icon"></i> Projets</a></li>
-                  <li class="navv-item"><a href="#contact" class="navv-link"><i class="fas fa-envelope navv-icon"></i> Contact</a></li>
+                  <li class="navv-item active">
+                    <a href="#" class="navv-link"><span class="iconify-inline navv-icon" data-icon="bx:bx-home"></span><span>Home</span></a></li>
+                  <li class="navv-item"><a href="#about" class="navv-link"><span class="iconify-inline navv-icon" data-icon="bx:bx-user" data-width="20"></span> <span>About</span></a></li>
+                  <li class="navv-item"><a href="#skills" class="navv-link"><span class="iconify-inline navv-icon" data-icon="akar-icons:star"></span><span>Skills</span></a></li>
+                  <li class="navv-item"><a href="#portfolio" class="navv-link"><span class="iconify-inline navv-icon" data-icon="bx:bx-book"></span>Projets</a></li>
+                  <li class="navv-item"><a href="#contact" class="navv-link"><span class="iconify-inline navv-icon" data-icon="bx:bx-card"></span> Contact</a></li>
                 </ul>
                 <i class ="fas fa-times navv-close" id="navv-close"></i>
               </div><!-- .nav-menu -->
 
               <div class="navv-btns">
                 <!-- Theme Change btn --> 
+                <span class="navv-mob-txt">JPC8<span class="navv-mob-pry">.in</span></span>
                   <i class="fas fa-moon change-theme tip_mode" id="theme-button"></i>
                   <i class="fas fa-sync-alt change-color tip_theme" id="theme-color"></i>
                   <div class="navv-toggle" id="navv-toggle">
@@ -78,9 +73,7 @@
               <div class="copyright">
                 &copy; <strong>JPC8</strong>.in
               </div>
-            <!-- </nav> -->
-
-            
+            <!-- </nav> -->   
           </header>
             <!-- ======= Hero Section ======= -->
             <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -92,8 +85,10 @@
                 </div>
                 </div>
                 <div class="scroll_txt">
-                  <p><i class="fas fa-mouse pr-2"></i>Scroll Down</p>
+                  <span><i class="iconify-inline home-icons mb-1" data-icon="gg:mouse"></i> Scroll Down</span>
+                  <!-- <p><i class="fas fa-mouse pr-2"></i>Scroll Down</p> -->
                 </div>
+
             </section>
 
           <main id="main">
@@ -106,7 +101,7 @@
                   <p>My introduction</p>
                 </div>
 
-                <div class="row">
+                <div class="row section-content">
                   <div class="col-lg-9 pt-4 pt-lg-0 content">
                     <h3>Analyst &amp; Web Developer.</h3>
                     <p class="pb-3">
@@ -693,19 +688,38 @@
           <footer id="footer">
             <div class="container">
               <h5>Used Frameworks</h5>
-              <div class="footer-framework">
-                <span>MyResume</span>
-                <span>MyResume</span>
-                <span>MyResume</span>
-                <span>MyResume</span>
-                <span>MyResume</span>
+              <div class="credits">
+                <span id="bs_tip">Bootstrap v4.6</span>
+                <span class="mr-2 ml-2">|</span>
+
+                <span id="fas_tip">Font awesome v5</span>
+                <span class="mr-2 ml-2">|</span>
+
+                <span id="icofy_tip">Iconify v2</span>
+                <span class="mr-2 ml-2">|</span>
+
+                <span id="aso_tip">AOS v2.3</span>
+                <span class="mr-2 ml-2">|</span>
+                
+                <span id="tipy_tip">Tippy Js v6</span>
+                <span class="mr-2 ml-2">|</span>
+
+                <span id="typ_tip">Typed Js v2</span>
+                <span class="mr-2 ml-2">|</span>
+
+                <span id="cnt_tip">Counter Up v1</span>
+                <span class="mr-1 ml-1">|</span>
+
+                <span id="iso_tip">Isotope v3</span>
               </div>
               
-              <div class="credits mt-3"> Designed with ❤ &amp; 🤝 </div>
+              <div class="signoff mt-3 mb-5"> Designed with ❤ &amp; 🤝 by <strong>Josh Cyril</strong> </div>
             </div>
           </footer>
 
+          <!-- back to top -->
           <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
           <div id="preloader">
             <svg id="jpc_signbg" viewBox="0 0 195 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="jpc_sign_path3" d="M54.9887 15.7197C51.6971 15.7197 48.4055 14.9172 45.5058 13.4267C51.8538 6.77707 64.6675 9.22293 70.3102 2C67.8807 21.9873 65.4904 41.9745 63.0609 62C54.2833 40.4076 24.6591 26.535 5.14472 39.7197C0.638383 42.7388 1.53965 49.8854 4.32182 51.9873C28.4993 69.9108 73.6018 27.949 105.656 38.6879C128.461 46.9045 153.971 26.6497 150.327 3.22293C136.259 52.9809 144.41 50.2675 193 43.4267" stroke-linecap="round" stroke-linejoin="round"/>
@@ -734,18 +748,13 @@
         <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js" integrity="sha512-iELsXYafbp3drYeT4GnTWc0bRzoyA9zeMPohtYOL/xmCEjqc7xbPpV0UXRfhjGgy3co9XR2YkZq/CQvEa+Os8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         
         <!-- Development -->
         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
