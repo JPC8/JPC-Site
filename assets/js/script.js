@@ -111,15 +111,15 @@
     })
     }
 
-    /*==================== REMOVE MENU MOBILE ====================*/
-    const navLink = document.querySelectorAll('.navv-link')
+    // /*==================== REMOVE MENU MOBILE ====================*/
+    // const navLink = document.querySelectorAll('.navv-link')
 
-    function linkAction(){
-    const navMenu = document.getElementById('navv-menu')
-    // When we click on each nav-link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-    }
-    navLink.forEach(n => n.addEventListener('click', linkAction))
+    // function linkAction(){
+    // const navMenu = document.getElementById('navv-menu')
+    // // When we click on each nav-link, we remove the show-menu class
+    // navMenu.classList.remove('show-menu')
+    // }
+    // navLink.forEach(n => n.addEventListener('click', linkAction))
 
     // Hero typed
     if ($('.typed').length) {
@@ -135,10 +135,33 @@
     }
 
     // jQuery counterUp
-    $('[data-toggle="counter-up"]').counterUp({
-      delay: 15,
-      time: 800
+    // $('[data-toggle="counter-up"]').counterUp({
+    //   delay: 15,
+    //   time: 800
+    // });
+
+    const counterUp = window.counterUp.default
+
+    const callback = entries => {
+      entries.forEach( entry => {
+        const el = entry.target
+        if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+          counterUp( el, {
+            duration: 1000,
+            delay: 12,
+          } )
+          el.classList.add( 'is-visible' )
+        }
+      } )
+    }
+
+    const IO = new IntersectionObserver( callback, { threshold: 1 } )
+
+    const el = document.querySelectorAll( '.counter' )
+    el.forEach((eln)=> {
+      IO.observe( eln );
     });
+      
 
     // Skills section
     $('.skills-content').waypoint(function() {
@@ -215,25 +238,25 @@
       });
     }
 
-        /*==================== QUALIFICATION TABS ====================*/
-        const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]')
-    
-        tabs.forEach(tab =>{
-        tab.addEventListener('click', ()=>{
-        const target = document.querySelector(tab.dataset.target);
-    
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification__active')
-        })
-        target.classList.add('qualification__active')
-    
-        tabs.forEach(tab=>{
-            tab.classList.remove('qualification__active', 'quali_TabA')
-        })
-        tab.classList.add('qualification__active', 'quali_TabA')
-        })
-        })
+    /*==================== QUALIFICATION TABS ====================*/
+    const tabs = document.querySelectorAll('[data-target]'),
+    tabContents = document.querySelectorAll('[data-content]')
+
+    tabs.forEach(tab =>{
+    tab.addEventListener('click', ()=>{
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach(tabContent =>{
+        tabContent.classList.remove('qualification__active')
+    })
+    target.classList.add('qualification__active')
+
+    tabs.forEach(tab=>{
+        tab.classList.remove('qualification__active', 'quali_TabA')
+    })
+    tab.classList.add('qualification__active', 'quali_TabA')
+    })
+    })
 
   // Porfolio isotope and filter
   $(window).on('load', function() {
@@ -256,13 +279,17 @@
 
   });
 
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
+  $(window).on('load', function() {
+    aos_init();
   });
+
+  // Portfolio details carousel
+  // $(".portfolio-details-carousel").owlCarousel({
+  //   autoplay: true,
+  //   dots: true,
+  //   loop: true,
+  //   items: 1
+  // });
 
 })(jQuery);
 

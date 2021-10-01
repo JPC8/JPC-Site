@@ -200,7 +200,9 @@ a{
 .theme-cr-1:hover,
 .theme-cr-2:hover,
 .theme-cr-3:hover{
-  box-shadow: var(--thin-shadow);
+  /* box-shadow: var(--thin-shadow); */
+  outline: 2px solid #e6ff08;
+  cursor: pointer;
 }
 
 .theme-cr-1{
@@ -302,7 +304,7 @@ a{
 
   .loader1 {
       font-size: 22px;
-      animation: showup 7s infinite;
+      animation: showup 5s infinite;
       color: var(--first-color);
       font-weight: var(--font-semi-bold);
   }
@@ -325,7 +327,7 @@ a{
   }
   .loader2 .loader2-1 {
   margin-left:-25px;
-  animation: slidein 5s ease infinite;
+  animation: slidein 5s infinite;
   }
 
   @-webkit-keyframes showup {
@@ -373,7 +375,7 @@ a{
       0% { margin-left:-200px; } /*-200*/
       20% { margin-left:-200px; }
       35% { margin-left:0px; }
-      100% { margin-left:0px; }
+      100% { margin-left:0; }
   }
 
   @-webkit-keyframes reveal {
@@ -765,14 +767,14 @@ a{
 .scroll_txt{
   color: rgb(0, 0, 0);
   position: absolute;
-  bottom:15px;
+  bottom:2rem;
   z-index: 2;
   color: #fff;
   transition: all .5s;
   cursor: default;
 }
 .scroll_txt:hover{
-  bottom:20px;
+  bottom:1rem;
 }
 /* @media (min-width: 1440px) {
   #hero {
@@ -794,7 +796,7 @@ a{
   @media (max-width: 900px) {
     #hero h1 {
       font-size: 32px;
-          }
+    }
 }
 
 @media (max-width: 767px) {
@@ -807,7 +809,14 @@ a{
     line-height: 24px;
     margin-bottom: 30px;
   }
+  .scroll_txt{
+    bottom:5rem;
+  }
+  .back-to-top{
+    bottom:3.8rem;
+  }
 }
+
 
 /* Main */
 /* .snappingScroll{
@@ -976,7 +985,9 @@ section {
   margin: 0;
   font-size: 14px;
 }
-
+.counter:not(.is-visible) {
+	visibility: hidden;
+}
 /* ~~~ Skills ~~~ */
 
 /*==================== SKILLS ====================*/
