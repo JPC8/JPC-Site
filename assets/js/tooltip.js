@@ -38,7 +38,7 @@
     interactiveBorder: 10,
     zIndex: 99999,
     animation: 'scale',
-    offset: [-36, 2],
+    offset: [-36, 8],
     theme: 'themeSelector',
     touch: 'hold',
     delay: [400, null],

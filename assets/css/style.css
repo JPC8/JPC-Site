@@ -7,9 +7,34 @@
     --header-height: 3rem ;
 
     /*========== Colors ==========*/
-    --hue-color: 188; /*Purple 250 - Green 142 - Blue 230 - Pink 340 Cyan-188*/
+    --hue-color: 202; /*Purple 250 - Green 142 - Blue 230 - Pink 340 Cyan-188 202*/
 
-    --first-color: hsl(var(--hue-color), 69%, 45%) ;
+    --first-color: hsl(var(--hue-color), 69%, 61%) ;
+    --first-color-second: hsl(var(--hue-color), 80%, 61%) ;
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%) ;
+    --first-color-lighter: hsl(var(--hue-color), 40%, 85%) ;
+    --title-color: hsl(var(--hue-color), 8%, 15%) ;
+    --text-color: hsl(var(--hue-color), 8%, 45%) ;
+    --text-color-light: hsl(var(--hue-color), 8%, 65%) ;
+    --text-hero-color: hsl(var(--hue-color), 8%, 99%) ;
+    --text-hero-color2: hsl(var(--hue-color), 8%, 95%) ;
+    --shadow-colorr: rgba(0, 0, 0, 0.102);
+    --body-color: hsl(var(--hue-color), 33%, 97%) ;
+    --first-color-bg: hsl(var(--hue-color), 48%, 95%) ;
+
+    --container-color: hsl(var(--hue-color), 26%, 98%);
+
+    --card-color: hsl(var(--hue-color), 20%, 98%);
+    --card-color-hover: hsl(var(--hue-color), 15%, 97%);
+
+    --hoverBtn-color: hsl(var(--hue-color), 40%, 96%) ;
+
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%) ;
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ;
+
+    
+
+    /* --first-color: hsl(var(--hue-color), 69%, 45%) ;
     --first-color-second: hsl(var(--hue-color), 80%, 45%) ;
     --first-color-alt: hsl(var(--hue-color), 57%, 53%) ;
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%) ;
@@ -26,8 +51,7 @@
     --card-color-hover: hsl(var(--hue-color), 15%, 97%);
     --hoverBtn-color: hsl(var(--hue-color), 40%, 96%) ;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%) ;
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ;
-
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ; */
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -46,25 +70,14 @@
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-
     /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
 
     /*========== Shadow ==========*/
-    --thin-shadow: 2px 2px 4px 0 rgba(0,0,0,.15);
-    --thick-shadow: 0 -1px 8px 2px rgba(0,0,0,.15);
+    --thin-shadow: 2px 2px 4px 0 var(--shadow-colorr);
+    --thick-shadow: 0 -1px 8px 2px var(--shadow-colorr);
 }
 
 /*========== Variables Dark theme ==========*/
@@ -76,21 +89,23 @@ body.dark-theme{
   --input-color: hsl(var(--hue-color), 29%, 16%) ;
   --body-color: hsl(var(--hue-color), 28%, 12%) ;
   --first-color-bg: hsl(var(--hue-color), 28%, 15%) ;
-  --container-color: hsl(var(--hue-color), 29%, 16%) ;
+  --shadow-colorr: rgba(255, 255, 255, 0.068);
+  --container-color: hsl(var(--hue-color), 29%, 12%) ;
+
   --hoverBtn-color: hsl(var(--hue-color), 30%, 9%) ;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%) ;
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%) ;
   --card-color: hsl(var(--hue-color), 20%, 16%);
   --card-color-hover: hsl(var(--hue-color), 15%, 16%);
+
+  --thin-shadow: 2px 2px 4px 0 var(--shadow-colorr);
+  --thick-shadow: 0 -1px 8px 2px var(--shadow-colorr);
 }
 
 .tippy-box[data-theme~='space'] {
   background: var(--first-color);
-  background: -moz-linear-gradient(38deg, var(--first-color) 25%, var(--first-color-second) 100%);
-  background: -webkit-linear-gradient(38deg, var(--first-color) 25%, var(--first-color-second) 100%);
-  background: linear-gradient(38deg, var(--first-color) 25%, var(--first-color-second) 100%); 
   /* background-color: var(--first-color); */
-  color: #fff;
+  color: var(--body-color);
 }
 .tippy-box[data-theme~='space'][data-placement^='top'] > .tippy-arrow::before {
   border-top-color: var(--first-color);
@@ -100,11 +115,11 @@ body.dark-theme{
 }
 
 .tippy-box[data-theme~='themeSelector'] {
-  background: var(--body-color);
+  background: var(--first-color-bg);
   color: var(--text-color);
 }
 .tippy-box[data-theme~='themeSelector'][data-placement^='top'] > .tippy-arrow::before {
-  border-top-color: var(--body-color);
+  border-top-color: var(--first-color-bg);
 }
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
@@ -412,9 +427,9 @@ a{
   height: 40px;
   border-radius: .5rem;
   right: 15px;
-  bottom: 15px;
+  bottom: 1rem;
   background: var(--first-color);
-  color: #fff;
+  color: var(--body-color);
   transition: display 0.5s ease-in-out;
   z-index: 99997;
   
@@ -428,7 +443,7 @@ a{
 }
 
 .back-to-top:hover {
-  color: #fff;
+  color: var(--body-color);
   background-color: var(--first-color-alt);
   text-decoration: none;
   transition: background 0.2s ease-in-out;
@@ -761,7 +776,7 @@ a{
   color: var(--text-hero-color2);
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid var(--first-color);
+  border-bottom: 3px solid var(--hoverBtn-color);
 }
 
 .scroll_txt{
@@ -1004,10 +1019,6 @@ section {
   color: var(--first-color);
 }
 
-.skills-icon{
-  margin-right: var(--mb-0-75);
-}
-
 .skills-title{
   font-size: var(--h3-font-size);
 }
@@ -1041,12 +1052,6 @@ section {
   font-weight: var(--font-medium);
 }
 
-.skills-dtnet{
-  width: 75%;
-}
-.skills-mern{
-  width: 85%;
-}
 
 .skills-close .skills-list{
   height: 0;
@@ -1055,7 +1060,7 @@ section {
 
 .skills-open .skills-list{
   height: max-content;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: 1.5rem;
 }
 
 .skills-open .skills-arrow{
@@ -1086,6 +1091,7 @@ section {
 
 .skills .progress-bar-wrap {
   background-color: var(--first-color-lighter);
+  border-radius: 1.5rem;
 }
 
 .skills .progress-bar {
@@ -1096,6 +1102,14 @@ section {
   border-radius: 1.5rem;
 }
 
+.skills-data{
+  padding: 0.75rem;
+}
+@media screen and (max-width: 767px){
+  .skills-data{
+    padding: 0.25rem 1.5rem;
+  }
+}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -1266,6 +1280,29 @@ section {
   font-size: var(--small-font-size);
 }
 
+.contact_github{
+  color:var(--text-color);
+}
+.contact_github:hover{
+  color:var(--text-color-light);
+  
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--text-color);
+}
+.contact-title{
+  color:var(--first-color);
+  font-size: 0.95rem;
+}
+
+.contact-title:hover{
+  color:var(--first-color-alt);
+  cursor: default;
+}
+@media screen and (max-width: 767px){
+  .contact-item{
+    padding-left: 2rem;
+  }
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
