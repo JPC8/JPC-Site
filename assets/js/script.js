@@ -4,7 +4,7 @@
     // Preloader
     $(window).on('load', function() {
       if ($('#preloader').length) {
-        $('#preloader').delay(4).fadeOut('slow', function() {
+        $('#preloader').delay(4000).fadeOut('slow', function() {
           $(this).remove();
         });
        
@@ -227,6 +227,33 @@
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+    })
+
+
+    const themeColorBtn = document.getElementById('theme-color')
+    var r = document.querySelector(':root');
+    var imgs = document.querySelector(".ProfileImg")
+    const clrs = [200, 300, 50, 1, 130];
+    const ptn = [`linear-gradient(45deg, rgba(106, 106, 106,0.06) 0%, rgba(106, 106, 106,0.06) 50%,rgba(174, 174, 174,0.06) 50%, rgba(174, 174, 174,0.06) 100%),linear-gradient(135deg, rgba(252, 252, 252,0.06) 0%, rgba(252, 252, 252,0.06) 50%,rgba(117, 117, 117,0.06) 50%, rgba(117, 117, 117,0.06) 100%),linear-gradient(90deg, var(--first-color),var(--first-color))`,`radial-gradient(circle at 19% 27%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 14% 15%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 52% 35%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 52% 35%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 57% 90%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 21% 88%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 15% 0%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 0% 66%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 41% 50%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 61% 49%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 62% 81%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 20% 47%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 26% 82%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 46% 9%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 47% 6%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 43% 28%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 67% 100%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 5%,transparent 5%, transparent 100%),linear-gradient(90deg, var(--first-color),rgb(145, 54, 196))`,`repeating-linear-gradient(0deg, hsla(var(--hue-color),74%,43%,0.15) 0px, hsla(var(--hue-color),74%,43%,0.15) 35px,transparent 35px, transparent 70px),repeating-linear-gradient(90deg, hsla(var(--hue-color),74%,43%,0.15) 0px, hsla(var(--hue-color),74%,43%,0.15) 35px,transparent 35px, transparent 70px),linear-gradient(90deg, var(--first-color-second),var(--first-color-second))`,`repeating-linear-gradient(135deg, var(--first-color) 0px, var(--first-color) 35px,hsl(var(--hue-color),71%,47%) 35px, hsl(var(--hue-color),71%,47%) 70px,hsl(var(--hue-color),65%,29%) 70px, hsl(var(--hue-color),65%,29%) 105px)`,`linear-gradient(45deg, rgba(204, 169, 114, 0.45) 0%, rgba(204, 169, 114, 0.45) 12%,rgba(147, 120, 114, 0.45) 12%, rgba(147, 120, 114, 0.45) 13%,rgba(176, 145, 114, 0.45) 13%, rgba(176, 145, 114, 0.45) 25%,rgba(233, 194, 114, 0.45) 25%, rgba(233, 194, 114, 0.45) 26%,rgba(89, 70, 115, 0.45) 26%, rgba(89, 70, 115, 0.45) 33%,rgba(32, 21, 115, 0.45) 33%, rgba(32, 21, 115, 0.45) 38%,rgba(118, 95, 115, 0.45) 38%, rgba(118, 95, 115, 0.45) 76%,rgba(61, 46, 115, 0.45) 76%, rgba(61, 46, 115, 0.45) 100%),linear-gradient(135deg, rgb(22, 238, 29),rgb(30, 166, 207))`];
+    const ptnSiz = [`70px 70px`, '','', '', '']
+    const imgClr = ["/assets/img/clrs-profile/cyan-min.jpeg","/assets/img/clrs-profile/purple-min.png","/assets/img/clrs-profile/yellow-min.jpeg","/assets/img/clrs-profile/red-min.jpeg","/assets/img/clrs-profile/green-min.png"]
+    let randomClrCtr = 0;
+
+    
+    // Create a function for setting a variable value
+    themeColorBtn.addEventListener('click', () => {
+      let randomClr = Math.floor(Math.random() * clrs.length);
+      let clrRan = randomClr
+      while(clrRan == randomClrCtr) {
+        randomClr = Math.floor(Math.random() * clrs.length);
+        break;
+      }
+      randomClrCtr = randomClr
+      // Set the value of variable
+      r.style.setProperty('--hue-color', clrs[randomClr]);
+      r.style.setProperty('--hero-pattern', ptn[randomClr]);
+      r.style.setProperty('--hero-size', ptnSiz[randomClr]);
+      imgs.src = imgClr[randomClr]; 
     })
 
     // Init AOS

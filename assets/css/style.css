@@ -1,18 +1,28 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+
 /*==================== VARIABLES CSS ====================*/
 :root {
     --header-height: 3rem ;
 
     /*========== Colors ==========*/
-    --hue-color: 202; /*Purple 250 - Green 142 - Blue 230 - Pink 340 Cyan-188 202*/
+    /*cyan 200 yellow 50 purple 300 red 1 lime 130*/
+    --hue-color: 200; 
 
     --first-color: hsl(var(--hue-color), 69%, 61%) ;
     --first-color-second: hsl(var(--hue-color), 80%, 61%) ;
     --first-color-alt: hsl(var(--hue-color), 57%, 53%) ;
     --first-color-lighter: hsl(var(--hue-color), 40%, 85%) ;
+    
+    --hero-pattern: radial-gradient(circle at center center, transparent,var(--first-color)),repeating-linear-gradient(135deg, var(--first-color) 0px, var(--first-color) 2px,transparent 2px, transparent 10px,var(--first-color) 10px, var(--first-color) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, hsl(var(--hue-color), 80%, 45%) 0px, hsl(var(--hue-color), 80%, 45%) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, var(--first-color),var(--first-color));
+    --hero-size: '';
+
+    --profile-imgClr: url("/assets/img/Dp-1-min.jpg");
+    /* 70px 70px */
+
     --title-color: hsl(var(--hue-color), 8%, 15%) ;
     --text-color: hsl(var(--hue-color), 8%, 45%) ;
     --text-color-light: hsl(var(--hue-color), 8%, 65%) ;
@@ -32,28 +42,8 @@
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%) ;
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ;
 
-    
-
-    /* --first-color: hsl(var(--hue-color), 69%, 45%) ;
-    --first-color-second: hsl(var(--hue-color), 80%, 45%) ;
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%) ;
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%) ;
-    --title-color: hsl(var(--hue-color), 8%, 15%) ;
-    --text-color: hsl(var(--hue-color), 8%, 45%) ;
-    --text-color-light: hsl(var(--hue-color), 8%, 65%) ;
-    --text-hero-color: hsl(var(--hue-color), 8%, 99%) ;
-    --text-hero-color2: hsl(var(--hue-color), 8%, 95%) ;
-    --input-color: hsl(var(--hue-color), 70%, 96%) ;
-    --body-color: hsl(var(--hue-color), 60%, 99%) ;
-    --first-color-bg: hsl(var(--hue-color), 70%, 97%) ;
-    --container-color: hsl(var(--hue-color), 26%, 98%);
-    --card-color: hsl(var(--hue-color), 20%, 98%);
-    --card-color-hover: hsl(var(--hue-color), 15%, 97%);
-    --hoverBtn-color: hsl(var(--hue-color), 40%, 96%) ;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%) ;
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%) ; */
-
     /*========== Font and typography ==========*/
+    --hero-font: 'Bonheur Royale', cursive;
     --body-font: 'Poppins', sans-serif;
     --body-font2: 'Open Sans', sans-serif;
 
@@ -80,6 +70,8 @@
     --thick-shadow: 0 -1px 8px 2px var(--shadow-colorr);
 }
 
+
+
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
   /* HSL color mode */
@@ -102,6 +94,7 @@ body.dark-theme{
   --thick-shadow: 0 -1px 8px 2px var(--shadow-colorr);
 }
 
+
 .tippy-box[data-theme~='space'] {
   background: var(--first-color);
   /* background-color: var(--first-color); */
@@ -114,13 +107,6 @@ body.dark-theme{
   border-bottom-color: var(--first-color);
 }
 
-.tippy-box[data-theme~='themeSelector'] {
-  background: var(--first-color-bg);
-  color: var(--text-color);
-}
-.tippy-box[data-theme~='themeSelector'][data-placement^='top'] > .tippy-arrow::before {
-  border-top-color: var(--first-color-bg);
-}
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
     :root {
@@ -187,51 +173,6 @@ a{
   background: var(--first-color-bg);
 }
 
-/* theme */
-.theme-container{
-  padding: .175rem;
-}
-
-.theme-container p{
-  margin-bottom: 5px;
-}
-.theme-cr{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-/* Themes */
-.theme-cr-1,
-.theme-cr-2,
-.theme-cr-3{
-  width: 25px;
-  height: 25px;
-  border-radius: 20%;
-  margin: 2px 5px;
-  transition: 0.2s;
-}
-
-.theme-cr-1:hover,
-.theme-cr-2:hover,
-.theme-cr-3:hover{
-  /* box-shadow: var(--thin-shadow); */
-  outline: 2px solid #e6ff08;
-  cursor: pointer;
-}
-
-.theme-cr-1{
-  background-image: url("/assets/img/theme-jpc/cyan-box.png");
-}
-
-.theme-cr-2{
-  background-image: repeating-radial-gradient(circle at center center, rgba(29,100,7, 0.3) 0px, rgba(29,100,7, 0.3) 2px,transparent 2px, transparent 12px,rgba(197,139,201, 0.3) 12px, rgba(197,139,201, 0.3) 17px,transparent 17px, transparent 22px),linear-gradient(90deg, rgb(244,244,255) 0%,rgb(244,244,255) 36%); 
-  background-size: 10px 10px;
-}
-
-.theme-cr-3{
-  background-color: green;
-}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -733,9 +674,8 @@ a{
   height: 100vh;
   /* background: url("../img/Feeling\ Stressed\ These\ Relaxing\ GIFs\ Will\ Calm\ You\ down.gif") top center; */
   /* background-size: cover; */
-  background-image: linear-gradient(45deg, rgba(106, 106, 106,0.06) 0%, rgba(106, 106, 106,0.06) 50%,rgba(174, 174, 174,0.06) 50%, rgba(174, 174, 174,0.06) 100%),linear-gradient(135deg, rgba(252, 252, 252,0.06) 0%, rgba(252, 252, 252,0.06) 50%,rgba(117, 117, 117,0.06) 50%, rgba(117, 117, 117,0.06) 100%),linear-gradient(90deg, var(--first-color),var(--first-color)); 
-  background-size: 70px 70px;
-
+  background-image: var(--hero-pattern); 
+  background-size: var(--hero-size);
 
   background-attachment: fixed;
 }
@@ -759,21 +699,23 @@ a{
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 5rem;
   font-weight: 700;
   line-height: 56px;
   color: var(--text-hero-color);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--hero-font);
 }
 
 #hero p {
   color: var(--text-hero-color2);
+  font-weight: 700;
   margin-bottom: 50px;
   font-size: 26px;
 }
 
 #hero p span {
   color: var(--text-hero-color2);
+  font-weight: 700;
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid var(--hoverBtn-color);
@@ -799,7 +741,7 @@ a{
 
 @media (max-width: 1080px) {
   #hero h1 {
-    font-size: 42px;
+    font-size: 4rem;
     line-height: 38px;
   }
   #hero p {
@@ -810,13 +752,13 @@ a{
 }
   @media (max-width: 900px) {
     #hero h1 {
-      font-size: 32px;
+      font-size: 3rem;
     }
 }
 
 @media (max-width: 767px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 2.5rem;
     line-height: 36px;
   }
   #hero p {
@@ -923,6 +865,8 @@ section {
   margin-bottom: 0;
 }
 .ProfileImg{
+  width: 80%;
+  height:80%;
   background-color: var(--container-color);
   border-radius: 1rem;
   border: 2px solid var(--first-color-alt);
