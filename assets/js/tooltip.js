@@ -1,5 +1,5 @@
  tippy('#discordHover', {
-    content: 'Josh Cyril#0177',
+    content: 'Josh Cyril#9797',
     zIndex: 99999,
     animation: 'scale',
     theme: 'space',
@@ -8,7 +8,7 @@
 
 
   tippy('#githubHover', {
-    content: 'JPC8',
+    content: 'JoshCyril',
     zIndex: 99999,
     animation: 'scale',
     theme: 'space',
@@ -16,7 +16,7 @@
   });
 
   tippy('#linkedinHover', {
-    content: 'in/jpc8',
+    content: 'in/JoshCyril',
     zIndex: 99999,
     animation: 'scale',
     theme: 'space',
@@ -119,7 +119,7 @@ function Clipboard_CopyTo(value) {
   }
   // when the copy button is triggred
   document.querySelector("#discordHover").onclick = function () {
-    Clipboard_CopyTo("Josh Cyril#0177");
+    Clipboard_CopyTo("Josh Cyril#9797");
   };
 
 //   function CalcDiff(dt1, dt2) {
